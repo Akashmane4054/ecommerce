@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+
+<head>
+<meta charset="ISO-8859-1">
+<title>All Users-loginRegistration</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+<form  th:action="@{/post}" method="post" style="max-width:600px; margin: 0 auto;" 
+      th:object="${Post}">
+ <div class=" container text-center">
+    
+      <div>
+        <h1> Welcome to profile</h1>
+      </div>
+    
+      
+        <div class="form-group row mt-5">
+        
+                
+                <label class="col-4 col-form-label">Enter here Post: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{post}" class="form-control" required 
+                    minlength="2" maxlength="20"/>
+                </div>
+            </div>
+                
+                
+                
+               <div class="container text-center mt-3"> 
+                 <input type="submit" value="Submit" /> 
+              </div>
+            </div>
+            
+    
+    </div>
+    
+ </form>
+</body>
+</html>
